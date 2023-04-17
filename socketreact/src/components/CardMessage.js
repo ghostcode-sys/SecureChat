@@ -62,13 +62,13 @@ const CardMessage = ({ msg, hideCard }) => {
   }
 
   return (
-    <div className="fixed bottom-1/2 left-1/2 border-2 w-64 h-72 rounded">
+    <div className="fixed bottom-1/2 left-1/2 border-2 w-64 h-72 rounded bg-lime-50">
       {!preview && (
         <button
           className="w-64 h-72 flex justify-center items-center "
           onClick={() => focus.current.click()}
         >
-          <img src="https://img.icons8.com/ios/50/null/image--v1.png"/>
+          <img src="https://img.icons8.com/ios/50/null/image--v1.png" alt="icon of potrait" />
         </button>
       )}
       <input
@@ -81,7 +81,7 @@ const CardMessage = ({ msg, hideCard }) => {
         (!isEncoded ? (
           <img src={preview} alt="Preview" className="w-64 h-64" id="orgImg" />
         ) : (
-          <img src={previewEncode} alt="Encoded image" className="w-64 h-64" />
+          <img src={previewEncode} alt="Encoded" className="w-64 h-64" />
         ))}
       {preview &&
         (!isEncoded ? (

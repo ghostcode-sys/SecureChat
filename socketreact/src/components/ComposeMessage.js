@@ -90,7 +90,7 @@ const ComposeMessage = ({ username, newMsg}) => {
           className="px-4 w-16 h-16 mr-4 rounded-full border-2 bg-lime-300"
           onClick={handleSubmit}
         >
-          <img src="https://img.icons8.com/android/24/null/paper-plane.png" />
+          <img src="https://img.icons8.com/android/24/null/paper-plane.png" alt="send msg button"/>
         </button>
       </form>
       {privateKey === "" ? (
@@ -100,13 +100,14 @@ const ComposeMessage = ({ username, newMsg}) => {
             value={newPrivateKey}
             onChange={changeKey}
             placeholder="Private key"
+            className="text-orange-400 font-bold outline-none focus:border-blue-300 border-b-2 mr-4"
           />
-          <input type="button" onClick={addKeys} value="Add key" />
+          <input type="button" onClick={addKeys} value="Add key" className="bg-lime-500 rounded px-2" />
         </div>
       ) : (
         <div>
-          <span>Key: {privateKey} </span>
-          <button onClick={() => setPrivateKey("")}>Change key</button>
+          <span className="text-orange-400 font-bold mr-4">Key: {privateKey} </span>
+          <button onClick={() => setPrivateKey("")}  className="bg-lime-500 rounded px-2">Change key</button>
         </div>
       )}
 

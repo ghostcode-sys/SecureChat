@@ -17,7 +17,7 @@ const Message = ({ name, msgs }) => {
 
   return (
     <div className="h-5/6">
-      <p className="text-2xl font-bold">{name}</p>
+      <p className="text-2xl font-bold text-blue-500">{name}</p>
       <div className="overflow-auto h-4/5 mt-4">
         {msgs.map((value, index) => {
           return <DisplayMsg side={value.side} msg={value.msg} key={index} />;
